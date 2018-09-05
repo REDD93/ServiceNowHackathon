@@ -2,7 +2,7 @@
 <record_update table="sys_embedded_help_role">
     <sys_embedded_help_role action="INSERT_OR_UPDATE">
         <order>1000</order>
-        <role display_value="x_270176_brain_fun.thema_user" name="x_270176_brain_fun.thema_user">236ec32edbd02300f75764d74896198b</role>
+        <role/>
         <sys_class_name>sys_embedded_help_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-05 14:18:33</sys_created_on>
