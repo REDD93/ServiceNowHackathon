@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="Course" max_length="40" name="x_270176_brain_fun_course" type="collection"/>
+    <element label="Course" max_length="40" name="x_270176_brain_fun_course" type="collection">
+        <element label="Kursname" max_length="100" name="kursname" type="string"/>
+    </element>
 </database>
