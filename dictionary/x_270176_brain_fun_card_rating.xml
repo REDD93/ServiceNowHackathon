@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Card Rating" max_length="40" name="x_270176_brain_fun_card_rating" type="collection">
+        <element label="Card" max_length="32" name="card" reference="x_270176_brain_fun_card" type="reference"/>
+        <element default="5" label="Rating" max_length="40" name="rating" type="integer"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+        <index name="index2">
+            <element name="card"/>
+        </index>
+    </element>
+</database>

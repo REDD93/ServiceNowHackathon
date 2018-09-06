@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="Topic" max_length="40" name="x_270176_brain_fun_topic" type="collection"/>
+    <element label="Topic" max_length="40" name="x_270176_brain_fun_topic" type="collection">
+        <element label="Course" max_length="32" name="course" reference="x_270176_brain_fun_course" type="reference"/>
+        <element label="Description" max_length="255" name="description" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <index name="index">
+            <element name="course"/>
+        </index>
+    </element>
 </database>
