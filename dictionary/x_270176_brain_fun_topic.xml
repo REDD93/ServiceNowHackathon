@@ -2,10 +2,14 @@
 <database>
     <element label="Topic" max_length="40" name="x_270176_brain_fun_topic" type="collection">
         <element label="Course" max_length="32" name="course" reference="x_270176_brain_fun_course" type="reference"/>
+        <element label="Creator" max_length="32" name="creator" reference="sys_user" type="reference"/>
         <element label="Description" max_length="255" name="description" type="string"/>
         <element label="Name" max_length="40" name="name" type="string"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" default="javascript: current.setValue('public', current.course.public);" label="Public" max_length="40" name="public" type="boolean"/>
         <index name="index">
+            <element name="creator"/>
+        </index>
+        <index name="index2">
             <element name="course"/>
         </index>
     </element>
