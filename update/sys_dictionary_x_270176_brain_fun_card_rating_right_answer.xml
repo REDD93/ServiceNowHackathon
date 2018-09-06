@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="question" table="x_270176_brain_fun_card">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="right_answer" table="x_270176_brain_fun_card_rating">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -15,28 +15,28 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Question</column_label>
+        <column_label>Right Answer</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>false</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
         <dependent_on_field/>
-        <display>true</display>
+        <display>false</display>
         <dynamic_creation>false</dynamic_creation>
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>question</element>
+        <element>right_answer</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
+        <internal_type display_value="">boolean</internal_type>
         <mandatory>false</mandatory>
-        <max_length>1023</max_length>
-        <name>x_270176_brain_fun_card</name>
+        <max_length>40</max_length>
+        <name>x_270176_brain_fun_card_rating</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -53,16 +53,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-09-06 07:21:00</sys_created_on>
-        <sys_id>fa48763adb102300f75764d748961962</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Question</sys_name>
+        <sys_created_on>2018-09-06 16:04:17</sys_created_on>
+        <sys_id>b920f80fdb542300f75764d74896191a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Right Answer</sys_name>
         <sys_package display_value="Brain Funnel" source="x_270176_brain_fun">417dcbe2dbd02300f75764d7489619b9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Brain Funnel">417dcbe2dbd02300f75764d7489619b9</sys_scope>
-        <sys_update_name>sys_dictionary_x_270176_brain_fun_card_question</sys_update_name>
+        <sys_update_name>sys_dictionary_x_270176_brain_fun_card_rating_right_answer</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-09-06 15:11:23</sys_updated_on>
+        <sys_updated_on>2018-09-06 16:04:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

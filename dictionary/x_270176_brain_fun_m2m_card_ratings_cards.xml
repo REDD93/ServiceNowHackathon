@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Brain Fun M2m Card Ratings Cards" max_length="40" name="x_270176_brain_fun_m2m_card_ratings_cards" type="collection">
+        <element label="Card" max_length="32" name="card" reference="x_270176_brain_fun_card" type="reference"/>
+        <element label="Card Rating" max_length="32" name="card_rating" reference="x_270176_brain_fun_card_rating" type="reference"/>
+        <element label="Seen" max_length="40" name="seen" type="boolean"/>
+        <index name="index">
+            <element name="card_rating"/>
+        </index>
+        <index name="index2">
+            <element name="card"/>
+        </index>
+    </element>
+</database>

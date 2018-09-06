@@ -3,7 +3,10 @@
     <element label="Card Rating" max_length="40" name="x_270176_brain_fun_card_rating" type="collection">
         <element label="Card" max_length="32" name="card" reference="x_270176_brain_fun_card" type="reference"/>
         <element default="5" label="Rating" max_length="40" name="rating" type="integer"/>
+        <element label="Right Answer" max_length="40" name="right_answer" type="boolean"/>
+        <element label="Seen" max_length="40" name="seen" type="boolean"/>
         <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="User Answer" mandatory="true" max_length="1023" name="user_answer" type="string"/>
         <index name="index">
             <element name="user"/>
         </index>

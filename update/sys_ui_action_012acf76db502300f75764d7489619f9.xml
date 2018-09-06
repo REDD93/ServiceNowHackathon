@@ -2,7 +2,7 @@
 <record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name/>
-        <active>true</active>
+        <active>false</active>
         <client>false</client>
         <comments/>
         <condition/>
@@ -34,7 +34,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>012acf76db502300f75764d7489619f9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Create New Course</sys_name>
         <sys_overrides/>
         <sys_package display_value="Brain Funnel" source="x_270176_brain_fun">417dcbe2dbd02300f75764d7489619b9</sys_package>
@@ -42,7 +42,7 @@
         <sys_scope display_value="Brain Funnel">417dcbe2dbd02300f75764d7489619b9</sys_scope>
         <sys_update_name>sys_ui_action_012acf76db502300f75764d7489619f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-09-06 08:42:47</sys_updated_on>
+        <sys_updated_on>2018-09-06 11:13:23</sys_updated_on>
         <table>x_270176_brain_fun_topic</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -6,56 +6,58 @@
         <client>false</client>
         <comments/>
         <condition/>
-        <form_action>false</form_action>
-        <form_button>false</form_button>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
         <form_style/>
         <hint/>
-        <list_action>true</list_action>
-        <list_banner_button>true</list_banner_button>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>
         <list_choice>false</list_choice>
         <list_context_menu>false</list_context_menu>
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>Take Test</name>
+        <name>Next Card</name>
         <onclick/>
         <order>100</order>
-        <script><![CDATA[var card = new GlideRecord('x_270176_brain_fun_card');
+        <script><![CDATA[current.setValue('seen',true);
+current.update();
 
-card.addQuery('topic', current.sys_id);
-card.query();
+var card = new GlideRecord('x_270176_brain_fun_card');
+var cardRating = new GlideRecord('x_270176_brain_fun_card_rating');
 
-while(card.next()){
-	var cardRating = new GlideRecord('x_270176_brain_fun_card_rating');
-	cardRating.initialize();
-	cardRating.setValue('card',card.sys_id);
-	cardRating.insert();
-}
-
-action.setRedirectURL(cardRating);]]></script>
+cardRating.addQuery('card.topic',current.card.topic);
+cardRating.addQuery('seen',false);
+cardRating.query();
+if(!cardRating.hasNext()){
+			action.setRedirectURL('x_270176_brain_fun_card_rating_list.do?%26sysparm_view=summary_view');
+} else {
+	cardRating.next();
+	action.setRedirectURL(cardRating);
+}]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-09-06 10:10:48</sys_created_on>
+        <sys_created_on>2018-09-06 12:50:04</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ceee57b6db902300f75764d748961905</sys_id>
-        <sys_mod_count>40</sys_mod_count>
-        <sys_name>Take Test</sys_name>
+        <sys_id>eb838803db142300f75764d7489619b2</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Next Card</sys_name>
         <sys_overrides/>
         <sys_package display_value="Brain Funnel" source="x_270176_brain_fun">417dcbe2dbd02300f75764d7489619b9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Brain Funnel">417dcbe2dbd02300f75764d7489619b9</sys_scope>
-        <sys_update_name>sys_ui_action_ceee57b6db902300f75764d748961905</sys_update_name>
+        <sys_update_name>sys_ui_action_eb838803db142300f75764d7489619b2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-09-06 14:54:46</sys_updated_on>
-        <table>x_270176_brain_fun_topic</table>
+        <sys_updated_on>2018-09-06 15:53:15</sys_updated_on>
+        <table>x_270176_brain_fun_card_rating</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>
