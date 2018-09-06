@@ -3,6 +3,6 @@
     <element label="Course" max_length="40" name="x_270176_brain_fun_course" type="collection">
         <element label="Course Name" max_length="40" name="course_name" type="string"/>
         <element label="Description" max_length="255" name="description" type="string"/>
-        <element label="Public" max_length="40" name="public" type="boolean"/>
+        <element default="true" label="Public" max_length="40" name="public" type="boolean"/>
     </element>
 </database>

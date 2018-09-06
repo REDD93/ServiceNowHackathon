@@ -4,6 +4,7 @@
         <element label="Course" max_length="32" name="course" reference="x_270176_brain_fun_course" type="reference"/>
         <element label="Description" max_length="255" name="description" type="string"/>
         <element label="Name" max_length="40" name="name" type="string"/>
+        <element calculation="//current.public = current.course.getValue('public');&#13;&#10;gs.addInfoMessage(current.course);&#13;&#10;&#13;&#10;" label="Public" max_length="40" name="public" type="boolean" virtual="true"/>
         <index name="index">
             <element name="course"/>
         </index>
