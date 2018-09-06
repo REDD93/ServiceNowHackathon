@@ -4,7 +4,7 @@
         <element label="Course" max_length="32" name="course" reference="x_270176_brain_fun_course" type="reference"/>
         <element label="Description" max_length="255" name="description" type="string"/>
         <element label="Name" max_length="40" name="name" type="string"/>
-        <element calculation="//current.public = current.course.getValue('public');&#13;&#10;gs.addInfoMessage(current.course);&#13;&#10;&#13;&#10;" label="Public" max_length="40" name="public" type="boolean" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" default="javascript: current.setValue('public', current.course.public);" label="Public" max_length="40" name="public" type="boolean"/>
         <index name="index">
             <element name="course"/>
         </index>
