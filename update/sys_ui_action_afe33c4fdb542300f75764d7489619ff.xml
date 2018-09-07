@@ -19,12 +19,25 @@
         <list_context_menu>true</list_context_menu>
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
-        <list_style/>
+        <list_style>destructive</list_style>
         <name>Wrong Answer</name>
         <onclick/>
         <order>100</order>
         <script><![CDATA[current.setValue('rating', (current.rating-1));
-current.update();]]></script>
+current.setValue('checked',true);
+current.update();
+
+var otherCards = new GlideRecord('x_270176_brain_fun_card_rating');
+otherCards.addQuery('checked',false);
+otherCards.query();
+
+if(!otherCards.hasNext()) {
+	action.setRedirectURL('x_270176_brain_fun_topic_list.do?sysparm_query=');
+	gs.addInfoMessage('Test done');
+} else {
+	action.setRedirectURL('x_270176_brain_fun_card_rating_list.do?sysparm_query=checkedSTARTSWITHfalse%26sysparm_view=summary_view');
+}
+]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -35,7 +48,7 @@ current.update();]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>afe33c4fdb542300f75764d7489619ff</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Wrong Answer</sys_name>
         <sys_overrides/>
         <sys_package display_value="Brain Funnel" source="x_270176_brain_fun">417dcbe2dbd02300f75764d7489619b9</sys_package>
@@ -43,7 +56,7 @@ current.update();]]></script>
         <sys_scope display_value="Brain Funnel">417dcbe2dbd02300f75764d7489619b9</sys_scope>
         <sys_update_name>sys_ui_action_afe33c4fdb542300f75764d7489619ff</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-09-06 16:30:34</sys_updated_on>
+        <sys_updated_on>2018-09-07 09:06:38</sys_updated_on>
         <table>x_270176_brain_fun_card_rating</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

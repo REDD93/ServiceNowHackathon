@@ -5,13 +5,13 @@
             <element>card.question</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-09-06 14:23:02</sys_created_on>
-            <sys_id>f209188fdb142300f75764d7489619f8</sys_id>
+            <sys_created_on>2018-09-07 08:14:19</sys_created_on>
+            <sys_id>6b3e4017db5c2300f75764d74896194b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_270176_brain_fun_card_rating" sys_domain="global" view="Default view">91753ff6dbd02300f75764d74896197d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-09-06 14:23:02</sys_updated_on>
+            <sys_updated_on>2018-09-07 08:14:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,27 +19,13 @@
             <element>user_answer</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-09-06 14:23:02</sys_created_on>
-            <sys_id>7609188fdb142300f75764d7489619f8</sys_id>
+            <sys_created_on>2018-09-07 08:14:19</sys_created_on>
+            <sys_id>eb3e4017db5c2300f75764d74896194b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_270176_brain_fun_card_rating" sys_domain="global" view="Default view">91753ff6dbd02300f75764d74896197d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-09-06 14:23:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>right_answer</element>
-            <position>2</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-09-06 16:04:17</sys_created_on>
-            <sys_id>863034cbdb542300f75764d74896199d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_270176_brain_fun_card_rating" sys_domain="global" view="Default view">91753ff6dbd02300f75764d74896197d</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-09-06 16:04:17</sys_updated_on>
+            <sys_updated_on>2018-09-07 08:14:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

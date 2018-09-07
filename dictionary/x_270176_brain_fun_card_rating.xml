@@ -2,6 +2,7 @@
 <database>
     <element label="Card Rating" max_length="40" name="x_270176_brain_fun_card_rating" type="collection">
         <element label="Card" max_length="32" name="card" reference="x_270176_brain_fun_card" type="reference"/>
+        <element label="Checked" max_length="40" name="checked" type="boolean"/>
         <element default="5" label="Rating" max_length="40" name="rating" type="integer"/>
         <element label="Right Answer" max_length="40" name="right_answer" type="boolean"/>
         <element label="Seen" max_length="40" name="seen" type="boolean"/>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Card" max_length="40" name="x_270176_brain_fun_card" type="collection">
-        <element label="Answer" max_length="1023" name="answer" type="string"/>
+        <element label="Answer" mandatory="true" max_length="1023" name="answer" type="string"/>
         <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Creator" max_length="32" name="creator" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <element label="Public" max_length="40" name="public" type="boolean"/>
-        <element display="true" label="Question" max_length="1023" name="question" type="string"/>
+        <element display="true" label="Question" mandatory="true" max_length="1023" name="question" type="string"/>
         <element label="Test View" max_length="40" name="test_view" type="boolean"/>
         <element label="Topic" mandatory="true" max_length="32" name="topic" reference="x_270176_brain_fun_topic" type="reference"/>
         <index name="index">

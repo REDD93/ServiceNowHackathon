@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name/>
+        <action_name>nightmare</action_name>
         <active>true</active>
         <client>false</client>
         <comments/>
@@ -13,20 +13,23 @@
         <form_style/>
         <hint/>
         <list_action>true</list_action>
-        <list_banner_button>true</list_banner_button>
-        <list_button>false</list_button>
+        <list_banner_button>false</list_banner_button>
+        <list_button>true</list_button>
         <list_choice>false</list_choice>
         <list_context_menu>false</list_context_menu>
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
-        <list_style/>
+        <list_style>destructive</list_style>
         <name>Nightmare</name>
         <onclick/>
-        <order>100</order>
+        <order>400</order>
         <script><![CDATA[var card = new GlideRecord('x_270176_brain_fun_card');
 
 card.addQuery('topic', current.sys_id);
 card.query();
+var cardFound = false;
+
+var nextCard = new GlideRecord('x_270176_brain_fun_card_rating');
 
 while(card.next()){
 
@@ -34,20 +37,24 @@ while(card.next()){
 	
 	cardRating.addQuery('card',card.sys_id);
 	cardRating.addQuery('user',gs.getUserID());
-	cardRating.addQuery('card_rating','<=',3);
+	cardRating.addQuery('rating','<=',3);
 	cardRating.query();
-	
-	if (!cardRating.hasNext()) {
-		cardRating.initialize();
-		cardRating.setValue('card',card.sys_id);
-		cardRating.setValue('user',gs.getUserID());
-		cardRating.insert();
-	} else {
+
+	if (cardRating.hasNext()) {
+		cardFound = true;
 		cardRating.next();
+		cardRating.setValue('checked',false);
+		cardRating.setValue('seen',false);
+		cardRating.setValue('user_answer','');
+		cardRating.update();
+		nextCard = cardRating;
 	}
 }
 
-action.setRedirectURL(cardRating);]]></script>
+if(!cardFound){
+	gs.addInfoMessage('No Nightmare Cards found!');
+}
+action.setRedirectURL(nextCard);]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -58,7 +65,7 @@ action.setRedirectURL(cardRating);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2530809bdb1c2300f75764d748961953</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Nightmare</sys_name>
         <sys_overrides/>
         <sys_package display_value="Brain Funnel" source="x_270176_brain_fun">417dcbe2dbd02300f75764d7489619b9</sys_package>
@@ -66,7 +73,7 @@ action.setRedirectURL(cardRating);]]></script>
         <sys_scope display_value="Brain Funnel">417dcbe2dbd02300f75764d7489619b9</sys_scope>
         <sys_update_name>sys_ui_action_2530809bdb1c2300f75764d748961953</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-09-07 07:16:01</sys_updated_on>
+        <sys_updated_on>2018-09-07 08:59:42</sys_updated_on>
         <table>x_270176_brain_fun_topic</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
