@@ -4,7 +4,7 @@
         <element label="Course" mandatory="true" max_length="32" name="course" reference="x_270176_brain_fun_course" type="reference"/>
         <element label="Creator" max_length="32" name="creator" reference="sys_user" type="reference"/>
         <element label="Description" mandatory="true" max_length="255" name="description" type="string"/>
-        <element label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element label="Topic Name" mandatory="true" max_length="40" name="name" type="string"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" default="javascript: current.setValue('public', current.course.public);" label="Public" max_length="40" name="public" type="boolean"/>
         <index name="index">
             <element name="creator"/>

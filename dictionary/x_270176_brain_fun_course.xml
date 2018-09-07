@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Course" max_length="40" name="x_270176_brain_fun_course" type="collection">
-        <element display="true" label="Name" mandatory="true" max_length="40" name="course_name" type="string"/>
+        <element display="true" label="Course Name" mandatory="true" max_length="40" name="course_name" type="string"/>
         <element label="Description" mandatory="true" max_length="255" name="description" type="string"/>
         <element default="true" label="Public" max_length="40" name="public" type="boolean"/>
     </element>

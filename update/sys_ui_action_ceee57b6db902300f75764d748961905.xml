@@ -46,6 +46,7 @@ while(card.next()){
 		cardRating.setValue('checked',false);
 		cardRating.setValue('seen',false);
 		cardRating.setValue('user_answer','');
+		cardRating.card.question.disabled = true;
 		cardRating.update();
 	}
 }
@@ -61,7 +62,7 @@ action.setRedirectURL(cardRating);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ceee57b6db902300f75764d748961905</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name>Normal</sys_name>
         <sys_overrides/>
         <sys_package display_value="Brain Funnel" source="x_270176_brain_fun">417dcbe2dbd02300f75764d7489619b9</sys_package>
@@ -69,7 +70,7 @@ action.setRedirectURL(cardRating);]]></script>
         <sys_scope display_value="Brain Funnel">417dcbe2dbd02300f75764d7489619b9</sys_scope>
         <sys_update_name>sys_ui_action_ceee57b6db902300f75764d748961905</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-09-07 08:15:12</sys_updated_on>
+        <sys_updated_on>2018-09-07 09:33:39</sys_updated_on>
         <table>x_270176_brain_fun_topic</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
